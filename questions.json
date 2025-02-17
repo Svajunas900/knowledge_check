@@ -1,0 +1,324 @@
+{"questions": 
+  {
+    "question_1": {
+      "question": "What's the difference between is and '==' ?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_2": {
+      "question": "Mutable data types.",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_3": {
+      "question": "What's GIL ?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "Global Interpreter Lock",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_4": {
+      "question": "Difference between multiprocessing and multithreading.",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_5": {
+      "question": "How are arguments passed by value or by reference in Python?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_6": {
+      "question": "What is the difference between a Set and Dictionary?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_7": {
+      "question": "What is List Comprehension? Give an Example.",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_8": {
+      "question": "How is a dictionary different from a list?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_9": {
+      "question": "What is the difference between / and // in Python?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_10": {
+      "question": "What is a lambda function?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_11": {
+      "question": "Can we Pass a function as an argument in Python?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_12": {
+      "question": "What is a Variable Scope in Python?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_13": {
+      "question": "What is docstring in Python?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_14": {
+      "question": "What are Built-in data types in Python?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_15": {
+      "question": "Dictionary Comprehension Example",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_16": {
+      "question": "Difference between List and Tuple?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_17": {
+      "question": "What is the difference between a shallow copy and a deep copy?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_18": {
+      "question": "What are Generators in Python?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_19": {
+      "question": "Does Python supports multiple Inheritance?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_20": {
+      "question": "What is slicing in Python?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_21": {
+      "question": "What is a namespace in Python?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_22": {
+      "question": "What is PIP?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_23": {
+      "question": "What are Pickling and Unpickling?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_24": {
+      "question": "Explain the self keyword in Python.",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_25": {
+      "question": "What are Python decorators examples",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_26": {
+      "question": "What are Python's __init__ and __str__ methods?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_27": {
+      "question": "What is the difference between list and tuple in Python?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_28": {
+      "question": "What are Python’s commonly used libraries for data analysis?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_29": {
+      "question": "What is the difference between asyncio and threading?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_30": {
+      "question": "What is a deque and when should it be used?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_31": {
+      "question": "What is the purpose of the with statement in Python?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_32": {
+      "question": "What is the __del__ method in Python?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_33": {
+      "question": "What are Python's @staticmethod and @classmethod?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_34": {
+      "question": "What is the difference between @property and a regular method?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_35": {
+      "question": "How can you optimize Python code for performance?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_36": {
+      "question": "What are Python's memory management techniques?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_37": {
+      "question": "Explain the concept of memoization and how it helps performance.",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_38": {
+      "question": "What is the difference between range() and xrange() in Python 2?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_39": {
+      "question": "Explain the concept of duck typing in Python.",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    },
+    "question_40": {
+      "question": "How do you manage environment variables in Flask?",
+      "option_1": "",
+      "option_2": "",
+      "option_3": "",
+      "option_4": "",
+      "correct_answer": 0
+    }
+  }
+}

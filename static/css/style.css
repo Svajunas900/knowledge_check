@@ -1,5 +1,8 @@
 .header{
   display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
   justify-content: center;
   align-items: center;
 }
@@ -13,6 +16,46 @@
   align-items: center;
 }
 
-/* .check_login{
-  width: ;
-} */
+.answer_form{
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.answer_grid{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 2rem;
+  width: 20%;
+  height: 50%;
+  background-color: burlywood;
+}
+
+.answer-1{
+  grid-column: 1;
+  height: 4rem;
+  width: 6rem;
+}
+
+.answer-2{
+  grid-column: 2;
+  height: 4rem;
+  width: 6rem;
+}
+
+.answer-3{
+  grid-column: 1;
+  height: 4rem;
+  width: 6rem;
+}
+
+.answer-4{
+  grid-column: 2;
+  height: 4rem;
+  width: 6rem;
+}
+
