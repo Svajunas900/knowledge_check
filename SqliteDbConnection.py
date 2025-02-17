@@ -1,4 +1,5 @@
 import sqlite3
+import datetime
 
 
 class MetaSingleton(type):
@@ -13,7 +14,7 @@ class MetaSingleton(type):
 
 class Singleton(metaclass=MetaSingleton):
   def __init__(self):
-    self.connection = sqlite3.connect("quiz_db.db")
+    self.connection = sqlite3.connect("quiz_db.db", check_same_thread=False)
     self.cursor = self.connection.cursor()
   
 
@@ -28,12 +29,65 @@ class Singleton(metaclass=MetaSingleton):
     self.cursor.execute("""
     CREATE TABLE IF NOT EXISTS logs(
                         id INTEGER PRIMARY KEY,
+                        user_id INT NOT NULL,
                         login INTEGER,
-                        time_spend TEXT,
-                        activity TEXT)
+                        logged_in_time TEXT,
+                        logged_out_time TEXT,
+                        activity TEXT,
+                        FOREIGN KEY (user_id) 
+                        REFERENCES users (id) 
+                            ON DELETE CASCADE 
+                            ON UPDATE CASCADE);
     """)
     self.connection.commit()
+  
+  def insert_user_query(self, username, email, password):
+    self.cursor.execute(f"INSERT INTO users(username, email, password) VALUES(?, ?, ?)", (username, email, password))
+    self.connection.commit()
 
+  def insert_login_user_to_logs(self, user_id):
+    self.cursor.execute(f"INSERT INTO logs(user_id, login, logged_in_time, logged_out_time, activity) VALUES(?, ?, ?, ?, ?)", 
+                        (user_id, 0, str(datetime.datetime.now().time()), "", "Played Quiz"))
+    self.connection.commit()
+  
+  def update_login_user_to_logs(self, user_id):
+    self.cursor.execute(f"SELECT * FROM logs WHERE user_id = ? ORDER BY logged_in_time DESC LIMIT 1", (user_id,))
+    row = self.cursor.fetchone()
+    logged_in_time = row[3]
+    if row:
+      logged_in_time = datetime.datetime.strptime(logged_in_time, '%H:%M:%S.%f').time()
+      time_now = datetime.datetime.now().time()
+      datetime1 = datetime.datetime.combine(datetime.datetime.today(), logged_in_time)
+      datetime2 = datetime.datetime.combine(datetime.datetime.today(), time_now)
+      time_spend = datetime2-datetime1
+      self.cursor.execute(f"UPDATE logs SET logged_out_time = ?, login = ? WHERE id=?", (str(time_spend), 1, row[0]))
+      self.connection.commit()
+
+  def select_user_by_email(self, email):
+    self.cursor.execute(f"SELECT * FROM users WHERE email =?", (email,))
+    result = self.cursor.fetchone()
+    return result
+  
+  def select_user_by_id(self, id):
+    self.cursor.execute(f"SELECT * FROM users WHERE id =?", (id,))
+    result = self.cursor.fetchone()
+    return result
+  
+  def select_user_by_username(self, username):
+    self.cursor.execute(f"SELECT * FROM users WHERE username =?", (username,))
+    result = self.cursor.fetchone()
+    return result
+
+  def select_all_users(self):
+    self.cursor.execute("SELECT * FROM users")
+    result = self.cursor.fetchall()
+    return result
+  
+  def select_all_logs(self):
+    self.cursor.execute("SELECT * FROM logs")
+    result = self.cursor.fetchall()
+    return result
 
 # db = Singleton()
 # db.create_tables()
+# print(str(datetime.datetime.now().time()))
