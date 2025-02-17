@@ -3,9 +3,8 @@ import bcrypt
 from SqliteDbConnection import Singleton
 from dotenv import load_dotenv
 import os 
-from flask_login import LoginManager, login_user, logout_user, current_user
+from flask_login import LoginManager, login_user, logout_user, current_user, login_required
 from models import User
-
 
 load_dotenv()
 
@@ -14,7 +13,6 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///quiz_db.db"
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 login_manager = LoginManager()
 login_manager.init_app(app)
-
 
 @login_manager.user_loader
 def loader_user(user_id):
@@ -26,6 +24,8 @@ def login():
   sqlite_db = Singleton()
   print(sqlite_db.select_all_users())
   print(sqlite_db.select_all_logs())
+  print(sqlite_db.select_all_user_answers())
+  print(sqlite_db.select_all_questions())
   if request.method == "POST":
     print("Yes")
     email = request.form["user_email"]
@@ -67,8 +67,15 @@ def register():
 
 
 @app.route("/qualifications", methods=["GET"])
+@login_required
 def qualifications():
-  return render_template("qualifications.html")
+  return render_template("qualifications.html", user_name="Svajunas", message="Hello world")
+
+
+@app.route("/qualifications_1", methods=["GET"])
+@login_required
+def qualifications_1():
+  return render_template("qualifications.html", user_name="Still_Svajunas", message="Still hello")
 
 
 @app.route("/logout")

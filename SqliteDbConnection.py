@@ -39,6 +39,24 @@ class Singleton(metaclass=MetaSingleton):
                             ON DELETE CASCADE 
                             ON UPDATE CASCADE);
     """)
+    self.cursor.execute("""
+    CREATE TABLE IF NOT EXISTS questions(
+                        id INTEGER PRIMARY KEY,
+                        question TEXT NOT NULL,
+                        option_1,
+                        option_2,
+                        option_3,
+                        option_4,
+                        correct_answer INTEGER)
+""")
+    self.cursor.execute("""
+    CREATE TABLE IF NOT EXISTS user_answers(
+                        id INTEGER PRIMARY KEY,
+                        user_id INTEGER,
+                        question_id INTEGER,
+                        answer INTEGER,
+                        FOREIGN KEY (user_id) REFERENCES users(id)
+                        FOREIGN KEY (question_id) REFERENCES questions(id))""")
     self.connection.commit()
   
   def insert_user_query(self, username, email, password):
@@ -87,7 +105,17 @@ class Singleton(metaclass=MetaSingleton):
     self.cursor.execute("SELECT * FROM logs")
     result = self.cursor.fetchall()
     return result
+  
+  def select_all_questions(self):
+    self.cursor.execute("SELECT * FROM questions")
+    result = self.cursor.fetchall()
+    return result
 
+  def select_all_user_answers(self):
+    self.cursor.execute("SELECT * FROM user_answers")
+    result = self.cursor.fetchall()
+    return result
+  
 # db = Singleton()
 # db.create_tables()
 # print(str(datetime.datetime.now().time()))
