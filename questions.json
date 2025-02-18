@@ -2,323 +2,323 @@
   {
     "question_1": {
       "question": "What's the difference between is and '==' ?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "option_1": "'==' checks for identity, is checks for value",
+      "option_2": "Is checks for identity, '==' checks for value",
+      "option_3": "None of these answers",
+      "option_4": "Is checks for identity, '==' assigns a value",
+      "correct_answer": 2
     },
     "question_2": {
       "question": "Mutable data types.",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "option_1": "List, set, dictionary",
+      "option_2": "List, tuple, set",
+      "option_3": "Set, dictionary, tuple",
+      "option_4": "Dictionary, tuple, list",
+      "correct_answer": 1
     },
     "question_3": {
-      "question": "What's GIL ?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "Global Interpreter Lock",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about GIL is false?",
+      "option_1": "The GIL ensures that only one thread executes Python bytecode at a time.",
+      "option_2": "In a single-threaded program, the GIL has minimal impact, and Pythons interpreter can run efficiently.",
+      "option_3": "While it works fine for I/O-bound tasks, the GIL limits the efficiency of multi-threading when tasks require intense computation",
+      "option_4": "The GIL does not prevent multiple threads from executing Python bytecode in parallel on multiple CPU cores",
+      "correct_answer": 4
     },
     "question_4": {
-      "question": "Difference between multiprocessing and multithreading.",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which tasks multiprocessing and multithreading are good for ?",
+      "option_1": "Multiprocessing is good for I/O bound tasks and multithreading for CPU bound tasks",
+      "option_2": "Multiprocessing is good for I/O bound tasks and multithreading for both CPU and I/O bound tasks",
+      "option_3": "Multiprocessing is good for both I/O and CPU bound tasks and multithreading for CPU bound tasks",
+      "option_4": "Multiprocessing is good for CPU bound tasks and multithreading for I/O bound tasks",
+      "correct_answer": 4
     },
     "question_5": {
-      "question": "How are arguments passed by value or by reference in Python?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "How are arguments passed, by value or by reference in Python?",
+      "option_1": "By reference",
+      "option_2": "By value",
+      "option_3": "As a copy",
+      "option_4": "None of these answers",
+      "correct_answer": 1
     },
     "question_6": {
       "question": "What is the difference between a Set and Dictionary?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "option_1": "Set store key-value pairs while dictionaries store values without duplicates",
+      "option_2": "Dictionaries store key-value pairs and set store values without duplicates",
+      "option_3": "Both set and dictionaries store key-value pairs, but sets doesn't store duplicates",
+      "option_4": "Both set and dictionaries store key-value pairs, but dictionaries doesn't store duplicates",
+      "correct_answer": 2
     },
     "question_7": {
-      "question": "What is List Comprehension? Give an Example.",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about jwt is incorrect?",
+      "option_1": "JWT is commonly used for user authentication in web applications",
+      "option_2": "A JWT is composed of three parts: a header, payload, and signature.",
+      "option_3": "The signature ensures that the data in the JWT is not tampered with, verifying its integrity.",
+      "option_4": "JWT should store sensitive data",
+      "correct_answer": 4
     },
     "question_8": {
       "question": "How is a dictionary different from a list?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "option_1": "List store values values with indexes and dictionaries store key-value pairs",
+      "option_2": "Dictionaries store key-value pairs and list store values without duplicates",
+      "option_3": "Both list and dictionaries store key-value pairs, but list doesn't store duplicates",
+      "option_4": "Both list and dictionaries store values with indexes, but dictionaries doesn't store duplicates",
+      "correct_answer": 1
     },
     "question_9": {
       "question": "What is the difference between / and // in Python?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "option_1": "/ Performs floating-point division // floor-point division",
+      "option_2": "// Performs floating-point division / floor-point division",
+      "option_3": "None of these answers",
+      "option_4": "Both perform floating-point division",
+      "correct_answer": 1
     },
     "question_10": {
-      "question": "What is a lambda function?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statements about lambda function is false?",
+      "option_1": "Lambda is useful for defining short, one-line functions without a name",
+      "option_2": "Lambda functions does not hurt readability if overused",
+      "option_3": "Lambda functions are often used with functions like map(), filter(), and reduce() for quick operations",
+      "option_4": "Lambda is not ideal for functions with multiple expressions or complicated logic.",
+      "correct_answer": 2
     },
     "question_11": {
       "question": "Can we Pass a function as an argument in Python?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "option_1": "Yes",
+      "option_2": "It's possible",
+      "option_3": "No",
+      "option_4": "Only lambda functions",
+      "correct_answer": 1
     },
     "question_12": {
-      "question": "What is a Variable Scope in Python?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about variable scope is incorrect?",
+      "option_1": "It helps manage which parts of the code can access specific variables.",
+      "option_2": "Variable scope allows differentiation between local variables, global variables, and nonlocal variables",
+      "option_3": "Local variables do affect global variables",
+      "option_4": "Variable scope is not designed for maintaining variable values across multiple function calls.",
+      "correct_answer": 3
     },
     "question_13": {
-      "question": "What is docstring in Python?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statements about docstring is false?",
+      "option_1": "Docstrings are written inside triple quotes",
+      "option_2": "A docstring is a string literal that appears at the beginning of a function, class, or module, used to describe its purpose, behavior, and usage.",
+      "option_3": "Docstrings should be structured and provide meaningful information about the code, not just random or irrelevant text.",
+      "option_4": "A docstring is a informal documentation",
+      "correct_answer": 4
     },
     "question_14": {
       "question": "What are Built-in data types in Python?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "option_1": "List, set, dictionary, namedtuple",
+      "option_2": "Int, list, str, float",
+      "option_3": "Namedtuple, int, str",
+      "option_4": "List, tuple, namedtuple, set",
+      "correct_answer": 2
     },
     "question_15": {
-      "question": "Dictionary Comprehension Example",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about dictionary comprehensions is incorrect?",
+      "option_1": "Dictionary comprehension allows you to create a dictionary in a single line of code by applying an expression to generate key-value pairs.",
+      "option_2": "You can't include conditional statements to filter out items while creating a dictionary.",
+      "option_3": "If the logic for generating dictionary entries is complex or involves multiple steps, using dictionary comprehension can reduce readability.",
+      "option_4": "For very large dictionaries, standard loops may be more efficient for clarity or memory usage, as comprehension can become harder to manage in such cases.",
+      "correct_answer": 2
     },
     "question_16": {
       "question": "Difference between List and Tuple?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "option_1": "List is mutable, and Tuple is immutable",
+      "option_2": "Tuple is mutable, and List is immutable",
+      "option_3": "List store key-value pairs, tuple doesn't",
+      "option_4": "Tuple store key-value pairs, list doesn't",
+      "correct_answer": 1
     },
     "question_17": {
-      "question": "What is the difference between a shallow copy and a deep copy?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about shallow copy is false?",
+      "option_1": "Changes to mutable nested objects will affect both the original and the copy.",
+      "option_2": "A shallow copy creates a new object but does not copy the nested objects. Instead, it copies references to the nested objects.",
+      "option_3": "A shallow copy creates a new object and recursively copies all nested objects, so the original and copy are completely independent.",
+      "option_4": "None of these answers",
+      "correct_answer": 3
     },
     "question_18": {
-      "question": "What are Generators in Python?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about generators is false?",
+      "option_1": "Generators allow you to generate values on the fly without storing them in memory",
+      "option_2": "hey help conserve memory by yielding one item at a time rather than creating and storing a full list.",
+      "option_3": "Generators do not support random access to elements since they yield items one at a time",
+      "option_4": "Generators can be iterated all the time.",
+      "correct_answer": 4
     },
     "question_19": {
-      "question": "Does Python supports multiple Inheritance?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about multiple inheritance is false?",
+      "option_1": "Multiple inheritance isn't supported",
+      "option_2": "It promotes code reuse by allowing a subclass to inherit from multiple classes, reducing redundancy.",
+      "option_3": "Multiple inheritance can lead to complicated and confusing hierarchies, especially when classes have conflicting methods or attributes.",
+      "option_4": "If a class only needs features from one class, multiple inheritance adds unnecessary complexity.",
+      "correct_answer": 1
     },
     "question_20": {
-      "question": "What is slicing in Python?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about slicing is false?",
+      "option_1": "Slicing is used to access a subset (slice) of a sequence (like lists, tuples, or strings).",
+      "option_2": "Slicing can be used with a negative step to reverse a sequence.",
+      "option_3": "Slicing is for accessing a single element by its index.",
+      "option_4": "Slicing allows you to modify or replace parts of sequences, such as lists.",
+      "correct_answer": 3
     },
     "question_21": {
-      "question": "What is a namespace in Python?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about namespace is false?",
+      "option_1": "A namespace is used to organize and manage variable names and function names, preventing conflicts",
+      "option_2": "A namespace isn't designed for holding large datasets or managing data structures like lists or dictionaries.",
+      "option_3": "A namespace is used for storing or modifying data directly.",
+      "option_4": "Namespaces allow you to separate code into different modules or packages, each with its own namespace to avoid clashes between names in large projects.",
+      "correct_answer": 3
     },
     "question_22": {
-      "question": "What is PIP?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about PIP is false?",
+      "option_1": "You can use pip to list, update, and uninstall installed packages.",
+      "option_2": "Pip is primarily used to install and manage external Python libraries or packages from the Python Package Index",
+      "option_3": "Pip allows you to easily upgrade to newer versions of installed packages.",
+      "option_4": "Pip works within virtual environments, it is used to create them.",
+      "correct_answer": 4
     },
     "question_23": {
-      "question": "What are Pickling and Unpickling?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about Pickling and Unpickling is false?",
+      "option_1": "Pickling is used to convert a Python object into a byte stream, which can be stored in a file or sent over a network.",
+      "option_2": "Unpickling is the reverse process, where the byte stream is converted back into a Python object.",
+      "option_3": "Pickling and unpickling are useful for saving and later restoring Python objects, including complex ones like custom classes or nested data structures",
+      "option_4": "Pickling does provide encryption",
+      "correct_answer": 4
     },
     "question_24": {
-      "question": "Explain the self keyword in Python.",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about self keyword is false.",
+      "option_1": "self is used to reference instance variables (attributes) within a class.",
+      "option_2": "self is used to call other methods of the same class, allowing them to operate on the instance data.",
+      "option_3": "It helps distinguish instance variables from local variables within methods, making it clear that you're referring to attributes of the current object",
+      "option_4": "self is not only used within class instances and does refer to global variables or other non-instance data in the program.",
+      "correct_answer": 4
     },
     "question_25": {
-      "question": "What are Python decorators examples",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about decorators is false",
+      "option_1": "Decorators are used to add functionality to existing functions or methods without changing their code directly.",
+      "option_2": "Decorators provide a way to abstract repetitive logic, such as logging, authentication, or timing, and apply it across multiple functions.",
+      "option_3": "Decorators should replace the core functionality of a function.",
+      "option_4": "Decorators should not be used to store complex state or manage resources that should be handled explicitly within the function or class itself",
+      "correct_answer": 3
     },
     "question_26": {
-      "question": "What are Python's __init__ and __str__ methods?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about __init__ is false?",
+      "option_1": "The __init__ method is used to initialize the attributes of an object when it is created.",
+      "option_2": "__init__ is used to set up the initial state of an object, making sure it starts with the necessary attributes or properties.",
+      "option_3": "The __init__ method does not create the object itself. The object is created before __init__ is called by Pythons memory management.",
+      "option_4": "__init__ is for object cleanup or destruction.",
+      "correct_answer": 4
     },
     "question_27": {
-      "question": "What is the difference between list and tuple in Python?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about list is false?",
+      "option_1": "Lists are used to store multiple items in a specific order. These items can be of different data types",
+      "option_2": "Lists are immutable, meaning you can't change, add, or remove elements after the list is created.",
+      "option_3": "Lists are commonly used in loops to iterate over each item.",
+      "option_4": "Lists are not the best data structure when you need to frequently search, sort, or perform other operations with high efficiency.",
+      "correct_answer": 2
     },
     "question_28": {
-      "question": "What are Python’s commonly used libraries for data analysis?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "What are Pythons commonly used libraries for data analysis?",
+      "option_1": "pandas, numpy, seaborn",
+      "option_2": "pillow, pandas, django",
+      "option_3": "flask, requests, numpy",
+      "option_4": "pandas, tkinter, pillow",
+      "correct_answer": 1
     },
     "question_29": {
-      "question": "What is the difference between asyncio and threading?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about asyncio is false?",
+      "option_1": "It allows you to handle multiple tasks at once without blocking the execution, making it efficient for I/O-bound tasks.",
+      "option_2": "asyncio is ideal for tasks that involve waiting, such as making HTTP requests, reading files, or database queries",
+      "option_3": "asyncio uses a single thread to manage multiple tasks concurrently, which reduces the overhead associated with multi-threading and multi-processing.",
+      "option_4": "asyncio is suitable for CPU-bound tasks",
+      "correct_answer": 4
     },
     "question_30": {
-      "question": "What is a deque and when should it be used?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about deque is false?",
+      "option_1": "It's commonly used in situations where you need to implement a queue, stack, or any other data structure that needs efficient operations from both ends.",
+      "option_2": "deque allows for efficient rotation of elements, which can be useful in certain algorithms or simulation tasks.",
+      "option_3": "deque is optimized for random access to elements by index.",
+      "option_4": "deque is designed to handle dynamic data structures, so it's not intended for fixed-size collections.",
+      "correct_answer": 3
     },
     "question_31": {
-      "question": "What is the purpose of the with statement in Python?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about with statement is false?",
+      "option_1": "The with statement is used for managing resources in a clean and efficient way, ensuring that resources are properly acquired and released",
+      "option_2": "It automatically handles setup and teardown operations, such as closing files, releasing locks, without requiring explicit calls to cleanup functions.",
+      "option_3": "It makes code cleaner by reducing the need for explicit try/finally blocks and minimizing the risk of resource leakage.",
+      "option_4": "The with statement is intended for general-purpose function calls.",
+      "correct_answer": 4
     },
     "question_32": {
-      "question": "What is the __del__ method in Python?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about __del__ is false?",
+      "option_1": "The __del__ method is used to define clean-up actions when an object is about to be destroyed.",
+      "option_2": "__del__ is useful for releasing resources that might not be handled by garbage collection, such as closing database connections or stopping threads.",
+      "option_3": "The __del__ method is substitute for managing memory.",
+      "option_4": "Relying on __del__ for complex cleanup can be inefficient.",
+      "correct_answer": 3
     },
     "question_33": {
-      "question": "What are Python's @staticmethod and @classmethod?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about @classmethod is false?",
+      "option_1": "@classmethod is used to define methods that take the class as the first argument",
+      "option_2": "@classmethod is often used to define factory methods that can create class instances in different ways or from different data formats",
+      "option_3": "It allows access to and modification of class-level attributes that are shared across all instances.",
+      "option_4": "To define a method that operates only on an instance of the class, use @classmethod.",
+      "correct_answer": 4
     },
     "question_34": {
-      "question": "What is the difference between @property and a regular method?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about @property is false?",
+      "option_1": "@property is not used to define a method that behaves like an attribute.",
+      "option_2": "@property is specifically designed for managing attribute-like access to methods that encapsulate logic or calculations.",
+      "option_3": "The @property decorator by itself is used to define a getter",
+      "option_4": "@property allows you to protect or hide the internal representation of an attribute, enabling you to provide read-only or calculated properties.",
+      "correct_answer": 1
     },
     "question_35": {
       "question": "How can you optimize Python code for performance?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "option_1": "Use Built-in Functions and Libraries",
+      "option_2": "Overusing Global Variables",
+      "option_3": "Use eval() and exec()",
+      "option_4": "Avoid Pythonic Code",
+      "correct_answer": 1
     },
     "question_36": {
-      "question": "What are Python's memory management techniques?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about memory management is false?",
+      "option_1": "Python uses an automatic memory management system that allocates memory for variables and objects dynamically",
+      "option_2": "Python doesn't handle memory allocation and deallocation automatically through garbage collection",
+      "option_3": "Python uses reference counting as the primary technique to track how many references exist to an object.",
+      "option_4": "Python uses a garbage collector (GC) to automatically manage memory.",
+      "correct_answer": 2
     },
     "question_37": {
-      "question": "Explain the concept of memoization and how it helps performance.",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about memoization is false",
+      "option_1": "Memoization is a one-size-fits-all solution",
+      "option_2": "Memoization is most effective with pure functions(functions where the output is determined solely by the input values and has no side effects)",
+      "option_3": "Memoization uses extra memory to store previously computed results, but the tradeoff is often worth it in terms of speed improvement, especially for recursive algorithms.",
+      "option_4": "Memoization can significantly improve the performance of functions, particularly those with expensive recursive calls.",
+      "correct_answer": 1
     },
     "question_38": {
-      "question": "What is the difference between range() and xrange() in Python 2?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about range() is false?",
+      "option_1": "range() is commonly used to generate a sequence of numbers",
+      "option_2": "It is often used with for loops to iterate over a sequence of numbers",
+      "option_3": "range() only works with integers. You cannot use it with floating-point numbers, strings, or other types",
+      "option_4": "None of these answers",
+      "correct_answer": 4
     },
     "question_39": {
-      "question": "Explain the concept of duck typing in Python.",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about duck typing is false.",
+      "option_1": "Duck typing allows you to write code that focuses on an object's behavior rather than its specific type",
+      "option_2": "Duck typing is ideal for situations that require static type checking",
+      "option_3": "Duck typing enables more flexible and reusable code by removing the need for explicit type checks or inheritance hierarchies.",
+      "option_4": "Duck typing doesn't provide explicit contracts or interfaces for types.",
+      "correct_answer": 2
     },
     "question_40": {
-      "question": "How do you manage environment variables in Flask?",
-      "option_1": "",
-      "option_2": "",
-      "option_3": "",
-      "option_4": "",
-      "correct_answer": 0
+      "question": "Which statement about Flask is false?",
+      "option_1": "Flask is a lightweight web framework for building web applications and APIs in Python",
+      "option_2": "Flask is a micro-framework and may not be the best choice for large, complex web applications.",
+      "option_3": "Flask is commonly used to create REST APIs. It's easy to define routes and handle HTTP methods like GET, POST, PUT, and DELETE.",
+      "option_4": "Flask comes with built-in ORM",
+      "correct_answer": 4
     }
   }
 }
