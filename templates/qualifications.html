@@ -20,16 +20,18 @@
 <form class="answer_form" method="post">
   <div class="answer_grid">
     {% for question in questions %}
-    <p class="question">{{ loop.index }} {{ question[1]}}</p>
-    <input type="hidden" name="question-{{ loop.index }}" value="{{question[0]}}">
-    <input type="checkbox" class="btn-check" id="btn-check-1-{{question[0]}}" autocomplete="off" name="answer-1-{{question[0]}}">
-    <label class="btn btn-primary answer" for="btn-check-1-{{question[0]}}">1. {{ question[2] }}</label>
-    <input type="checkbox" class="btn-check" id="btn-check-2-{{question[0]}}" autocomplete="off" name="answer-2-{{question[0]}}">
-    <label class="btn btn-primary answer" for="btn-check-2-{{question[0]}}">2. {{ question[3] }}</label>
-    <input type="checkbox" class="btn-check" id="btn-check-3-{{question[0]}}" autocomplete="off" name="answer-3-{{question[0]}}">
-    <label class="btn btn-primary answer" for="btn-check-3-{{question[0]}}">3. {{ question[4] }}</label>
-    <input type="checkbox" class="btn-check" id="btn-check-4-{{question[0]}}" autocomplete="off" name="answer-4-{{question[0]}}">
-    <label class="btn btn-primary answer" for="btn-check-4-{{question[0]}}">4. {{ question[5] }}</label>
+    <div class="question_container">
+      <p class="question-p">{{ loop.index }} {{ question[1]}}</p>
+      <input type="hidden" name="question-{{ loop.index }}" value="{{question[0]}}">
+      <input type="checkbox" class="btn-check" id="btn-check-1-{{question[0]}}" autocomplete="off" name="answer-1-{{question[0]}}">
+      <label class="btn btn-primary answer" for="btn-check-1-{{question[0]}}">1. {{ question[2] }}</label>
+      <input type="checkbox" class="btn-check" id="btn-check-2-{{question[0]}}" autocomplete="off" name="answer-2-{{question[0]}}">
+      <label class="btn btn-primary answer" for="btn-check-2-{{question[0]}}">2. {{ question[3] }}</label>
+      <input type="checkbox" class="btn-check" id="btn-check-3-{{question[0]}}" autocomplete="off" name="answer-3-{{question[0]}}">
+      <label class="btn btn-primary answer" for="btn-check-3-{{question[0]}}">3. {{ question[4] }}</label>
+      <input type="checkbox" class="btn-check" id="btn-check-4-{{question[0]}}" autocomplete="off" name="answer-4-{{question[0]}}">
+      <label class="btn btn-primary answer" for="btn-check-4-{{question[0]}}">4. {{ question[5] }}</label>
+    </div>
     {% endfor %}
   </div>
   <button type="submit">Submit</button>

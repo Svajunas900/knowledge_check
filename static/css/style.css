@@ -37,6 +37,12 @@
   text-align: left;
 }
 
-.question{
+.question-p{
+  display: block;
   margin: 0;
+}
+
+.btn{
+  width: 100%;
+  margin-bottom: 0.75rem;
 }

@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 import os 
 from flask_login import LoginManager, login_user, logout_user, current_user, login_required
 from models import User
-import json
 import random
 from functions import check_answers
 
@@ -90,12 +89,6 @@ def qualifications():
   all_questions = sqlite_db.select_all_questions()
   random.shuffle(all_questions)
   return render_template("qualifications.html", user_name="Svajunas", message="Hello world", questions=all_questions)
-
-
-@app.route("/qualifications_1", methods=["GET"])
-@login_required
-def qualifications_1():
-  return render_template("qualifications.html", user_name="Still_Svajunas", message="Still hello")
 
 
 @app.route("/logout")

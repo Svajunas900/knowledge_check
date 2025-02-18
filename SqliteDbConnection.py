@@ -106,6 +106,11 @@ class Singleton(metaclass=MetaSingleton):
     result = self.cursor.fetchone()
     return result
 
+  def select_question_by_question(self, question):
+    self.cursor.execute(f"SELECT * FROM questions where question =?", (question,))
+    result = self.cursor.fetchone()
+    return result
+
   def select_all_users(self):
     self.cursor.execute("SELECT * FROM users")
     result = self.cursor.fetchall()
