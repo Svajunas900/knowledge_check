@@ -17,16 +17,20 @@
   <div id="timer"></div>
   <h1>Hello, {{ current_user.username }}!</h1>
 </div>
-<form class="answer_form">
+<form class="answer_form" method="post">
   <div class="answer_grid">
-    <input type="checkbox" class="btn-check" id="btn-check-1" autocomplete="off">
-    <label class="btn btn-primary answer-1" for="btn-check-1">Answer 1</label>
-    <input type="checkbox" class="btn-check" id="btn-check-2" autocomplete="off">
-    <label class="btn btn-primary answer-2" for="btn-check-2">Answer 2</label>
-    <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off">
-    <label class="btn btn-primary answer-3" for="btn-check-3">Answer 3</label>
-    <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off">
-    <label class="btn btn-primary answer-4" for="btn-check-4">Answer 4</label>
+    {% for question in questions %}
+    <p class="question">{{ loop.index }} {{ question[1]}}</p>
+    <input type="hidden" name="question-{{ loop.index }}" value="{{question[0]}}">
+    <input type="checkbox" class="btn-check" id="btn-check-1-{{question[0]}}" autocomplete="off" name="answer-1-{{question[0]}}">
+    <label class="btn btn-primary answer" for="btn-check-1-{{question[0]}}">1. {{ question[2] }}</label>
+    <input type="checkbox" class="btn-check" id="btn-check-2-{{question[0]}}" autocomplete="off" name="answer-2-{{question[0]}}">
+    <label class="btn btn-primary answer" for="btn-check-2-{{question[0]}}">2. {{ question[3] }}</label>
+    <input type="checkbox" class="btn-check" id="btn-check-3-{{question[0]}}" autocomplete="off" name="answer-3-{{question[0]}}">
+    <label class="btn btn-primary answer" for="btn-check-3-{{question[0]}}">3. {{ question[4] }}</label>
+    <input type="checkbox" class="btn-check" id="btn-check-4-{{question[0]}}" autocomplete="off" name="answer-4-{{question[0]}}">
+    <label class="btn btn-primary answer" for="btn-check-4-{{question[0]}}">4. {{ question[5] }}</label>
+    {% endfor %}
   </div>
   <button type="submit">Submit</button>
 </form>

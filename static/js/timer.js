@@ -20,6 +20,7 @@ function startTimer() {
     }, 1000);  
 }
 
+
 window.onload = function() {
   updateTimerDisplay();
   startTimer();

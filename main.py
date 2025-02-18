@@ -6,6 +6,8 @@ import os
 from flask_login import LoginManager, login_user, logout_user, current_user, login_required
 from models import User
 import json
+import random
+from functions import check_answers
 
 load_dotenv()
 
@@ -22,6 +24,7 @@ def loader_user(user_id):
 
 @app.route("/", methods=["GET", "POST"])
 def login():
+  score = request.args.get('score')
   sqlite_db = Singleton()
   print(sqlite_db.select_all_users())
   print(sqlite_db.select_all_logs())
@@ -33,17 +36,14 @@ def login():
     password = request.form["user_password"]
     password_bytes = password.encode("utf-8")
     user = User.get_by_email(email)
-    print(user)
     if user:
       hashed_password = user.password
       result = bcrypt.checkpw(password_bytes, hashed_password)
       if result:
-        print("Trying to Logged In")
         login_user(user)
         sqlite_db.insert_login_user_to_logs(user.id)
-        print("logged In")
         return redirect(url_for("qualifications"))
-  return render_template("index.html")
+  return render_template("index.html", score=score)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -56,21 +56,40 @@ def register():
     password_bytes = password.encode("utf-8")
     salt = bcrypt.gensalt()
     hashed_password = bcrypt.hashpw(password_bytes, salt)
-    print("Trying")
     user = sqlite_db.select_user_by_email(email)
     if not user:
       sqlite_db.insert_user_query(username, email, hashed_password)
-
-      print("Success")
-    print("Tried")
     return redirect(url_for("login"))
   return render_template("register.html")
 
 
-@app.route("/qualifications", methods=["GET"])
+@app.route("/qualifications", methods=["GET", "POST"])
 @login_required
 def qualifications():
-  return render_template("qualifications.html", user_name="Svajunas", message="Hello world")
+  sqlite_db = Singleton()
+  if request.method == "POST":
+    user_answers = []
+    for i in range(1,41):
+      question_id = i
+      question = request.form.get(f"question-{i}", None)
+      answer_1 = request.form.get(f"answer-1-{i}", None)
+      answer_2 = request.form.get(f"answer-2-{i}", None)
+      answer_3 = request.form.get(f"answer-3-{i}", None)
+      answer_4 = request.form.get(f"answer-4-{i}", None)
+      if answer_1:
+        answer_1 = 1
+      if answer_2:
+        answer_2 = 2
+      if answer_3:
+        answer_3 = 3
+      if answer_4:
+        answer_4 = 4
+      user_answers.append((question_id, int(question), answer_1, answer_2, answer_3, answer_4))
+    score = check_answers(user_answers)
+    return redirect(url_for("login", score=score))
+  all_questions = sqlite_db.select_all_questions()
+  random.shuffle(all_questions)
+  return render_template("qualifications.html", user_name="Svajunas", message="Hello world", questions=all_questions)
 
 
 @app.route("/qualifications_1", methods=["GET"])

@@ -67,7 +67,12 @@ class Singleton(metaclass=MetaSingleton):
     self.cursor.execute(f"INSERT INTO logs(user_id, login, logged_in_time, logged_out_time, activity) VALUES(?, ?, ?, ?, ?)", 
                         (user_id, 0, str(datetime.datetime.now().time()), "", "Played Quiz"))
     self.connection.commit()
-  
+
+  def insert_question(self, question, option_1, option_2, option_3, option_4, correct_answer):
+    self.cursor.execute("INSERT INTO questions(question, option_1, option_2, option_3, option_4, correct_answer) VALUES(?, ?, ?, ?, ?, ?)",
+                        (question, option_1, option_2, option_3, option_4, correct_answer))
+    self.connection.commit()
+
   def update_login_user_to_logs(self, user_id):
     self.cursor.execute(f"SELECT * FROM logs WHERE user_id = ? ORDER BY logged_in_time DESC LIMIT 1", (user_id,))
     row = self.cursor.fetchone()
@@ -93,6 +98,11 @@ class Singleton(metaclass=MetaSingleton):
   
   def select_user_by_username(self, username):
     self.cursor.execute(f"SELECT * FROM users WHERE username =?", (username,))
+    result = self.cursor.fetchone()
+    return result
+
+  def select_question_by_id(self, id):
+    self.cursor.execute(f"SELECT * FROM questions WHERE id =?", (id,))
     result = self.cursor.fetchone()
     return result
 
