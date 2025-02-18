@@ -1,6 +1,6 @@
 import sqlite3
 import datetime
-
+import json
 
 class MetaSingleton(type):
   _instances = {}
@@ -131,6 +131,19 @@ class Singleton(metaclass=MetaSingleton):
     result = self.cursor.fetchall()
     return result
   
-# db = Singleton()
-# db.create_tables()
-# print(str(datetime.datetime.now().time()))
+db = Singleton()
+db.create_tables()
+questions = db.select_all_questions()
+if len(questions) < 1:
+  with open("questions.json") as file:
+    questions = json.load(file)
+    for question in questions["questions"]:
+      quiz_question = questions["questions"][question]["question"]
+      option_1 = questions["questions"][question]["option_1"]
+      option_2 = questions["questions"][question]["option_2"]
+      option_3 = questions["questions"][question]["option_3"]
+      option_4 = questions["questions"][question]["option_4"]
+      correct_answer = questions["questions"][question]["correct_answer"]
+      db.insert_question(quiz_question, option_1, option_2, option_3, option_4, correct_answer)
+    print("Success")
+  

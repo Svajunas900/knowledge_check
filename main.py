@@ -8,6 +8,7 @@ from models import User
 import random
 from functions import check_answers
 
+
 load_dotenv()
 
 app = Flask(__name__)
@@ -15,6 +16,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///quiz_db.db"
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 login_manager = LoginManager()
 login_manager.init_app(app)
+
 
 @login_manager.user_loader
 def loader_user(user_id):
@@ -25,12 +27,7 @@ def loader_user(user_id):
 def login():
   score = request.args.get('score')
   sqlite_db = Singleton()
-  print(sqlite_db.select_all_users())
-  print(sqlite_db.select_all_logs())
-  print(sqlite_db.select_all_user_answers())
-  print(sqlite_db.select_all_questions())
   if request.method == "POST":
-    print("Yes")
     email = request.form["user_email"]
     password = request.form["user_password"]
     password_bytes = password.encode("utf-8")
@@ -85,6 +82,7 @@ def qualifications():
         answer_4 = 4
       user_answers.append((question_id, int(question), answer_1, answer_2, answer_3, answer_4))
     score = check_answers(user_answers)
+    print(score)
     return redirect(url_for("login", score=score))
   all_questions = sqlite_db.select_all_questions()
   random.shuffle(all_questions)

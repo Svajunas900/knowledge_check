@@ -1,12 +1,17 @@
-from selenium.webdriver import Chrome
+from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.chrome.options import Options
 from SqliteDbConnection import Singleton
 import time
-from selenium.webdriver.common.action_chains import ActionChains
 from dotenv import load_dotenv
 import os 
 import random
 
+chrome_options = Options()
+chrome_options.add_argument("--headless")  
+chrome_options.add_argument("--disable-gpu")  
+chrome_options.add_argument("--no-sandbox")  
 
 load_dotenv()
 
@@ -14,14 +19,11 @@ EMAIL = os.getenv("EMAIL")
 PASSWORD = os.getenv("PASSWORD")
 
 def solve_quiz():
-  answers = random.randrange(32, 38)
-  list_ans = [True] * answers
-  list_false = [False] * (40 - answers)
-  combined_list = list_ans + list_false
-  random.shuffle(combined_list)
-
+  remote_url = "http://selenium_webscraper:4444/wd/hub"
+  answer_list = random_list()
   url = "http://127.0.0.1:5000/"
-  driver = Chrome()
+  driver = webdriver.Chrome()
+  # driver = webdriver.Remote(command_executor=remote_url, options=chrome_options)
   db = Singleton()
   actions = ActionChains(driver)
 
@@ -53,7 +55,7 @@ def solve_quiz():
       actions.move_to_element(answer).perform()
       answer_text = answer.text[3:]
       if correct_answer == answer_text:
-        check = combined_list.pop()
+        check = answer_list.pop()
         if check:
           answer.click()
   submit_button = driver.find_element(by=By.XPATH, value="/html/body/div/form/button")
@@ -61,6 +63,15 @@ def solve_quiz():
   submit_button.click()
   time.sleep(5)
   driver.quit()
+
+
+def random_list():
+  answers = random.randrange(32, 38)
+  list_ans = [True] * answers
+  list_false = [False] * (40 - answers)
+  combined_list = list_ans + list_false
+  random.shuffle(combined_list)
+  return combined_list
 
 # 32-38
 solve_quiz()
