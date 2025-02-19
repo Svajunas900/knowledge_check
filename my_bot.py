@@ -19,11 +19,11 @@ EMAIL = os.getenv("EMAIL")
 PASSWORD = os.getenv("PASSWORD")
 
 def solve_quiz():
-  remote_url = "http://selenium_webscraper:4444/wd/hub"
+  remote_url = "http://selenium-webscraper:4444/wd/hub"
   answer_list = random_list()
   url = "http://127.0.0.1:5000/"
-  driver = webdriver.Chrome()
-  # driver = webdriver.Remote(command_executor=remote_url, options=chrome_options)
+  # driver = webdriver.Chrome()
+  driver = webdriver.Remote(command_executor=remote_url, options=chrome_options)
   db = Singleton()
   actions = ActionChains(driver)
 
@@ -44,7 +44,7 @@ def solve_quiz():
     question_text = question.text
     if i < 10:
       question_text = question_text[2:]
-    if i >= 10:
+    else:
       question_text = question_text[3:]
     db_question = db.select_question_by_question(question_text)
     correct_answer_option = db_question[-1]
@@ -61,7 +61,7 @@ def solve_quiz():
   submit_button = driver.find_element(by=By.XPATH, value="/html/body/div/form/button")
   actions.move_to_element(submit_button).perform()
   submit_button.click()
-  time.sleep(5)
+  # time.sleep(5)
   driver.quit()
 
 
